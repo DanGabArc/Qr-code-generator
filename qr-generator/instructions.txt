@@ -1,0 +1,60 @@
+QR Code Generator Repository Instructions
+
+1. Prerequisites
+   - Node.js (version 14 or higher) and npm installed.
+   - Git installed.
+
+2. Clone the repository
+   ```
+   git clone https://github.com/your-username/qr-code-generator.git
+   cd qr-code-generator/vite-project
+   ```
+
+3. Install dependencies
+   ```
+   npm install
+   ```
+
+4. Run the development server
+   ```
+   npm run dev
+   ```
+   - After startup, open your browser at the URL shown in the terminal (usually http://localhost:5173/).
+
+5. Build for production
+   ```
+   npm run build
+   ```
+   - The output will be in the `dist/` folder.
+
+6. Common troubleshooting
+   - “vite: command not found”: make sure you ran `npm install` in the `vite-project` folder.
+   - QR codes do not appear: verify that your input field is not empty and that `<QRCode value="..." />` is receiving the correct `value` prop.
+   - Port conflict: use `npm run dev -- --port 3000` (or any free port).
+
+7. .gitignore
+   ```
+   node_modules/
+   dist/
+   .env
+   *.log
+   ```
+
+8. Project structure
+   ```
+   vite-project/
+   ├── public/            # Static assets
+   ├── src/               # React source files
+   │   └── App.jsx        # Main component
+   ├── package.json       # Scripts and dependencies
+   └── vite.config.js     # Vite configuration
+   ```
+
+9. Adding new dependencies
+   ```
+   npm install <package-name> --save
+   npm install <dev-package> --save-dev
+   ```
+
+10. License
+    MIT License. Feel free to modify and distribute. :)
